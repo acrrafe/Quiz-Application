@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quiz_questions_layout_padding">15dp</dimen>
+    <dimen name="prog_title_text_size">20sp</dimen>
+    <dimen name="prog_counter_text_size">30sp</dimen>
+    <dimen name="prog_max_text_size">20sp</dimen>
+    <dimen name="quiz_question_text_size">18sp</dimen>
+    <dimen name="quiz_question_padding">12dp</dimen>
+    <dimen name="main_layout_padding">10dp</dimen>
+    <dimen name="main_start_button_marginTop">10dp</dimen>
+    <dimen name="main_start_button_height">70dp</dimen>
+</resources>

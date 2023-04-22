@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizQuestionsActivity"
+    android:padding="@dimen/quiz_questions_layout_padding"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/lllayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/progTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:text="@string/question"
+                android:textSize="@dimen/prog_title_text_size" />
+
+            <TextView
+                android:id="@+id/progCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:textSize="@dimen/prog_counter_text_size"
+                android:textStyle="bold"
+                tools:text="0"
+                android:layout_toRightOf="@+id/progTitle" />
+
+            <TextView
+                android:id="@+id/progMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/prog_max_text_size"
+                android:text="@string/progressmax"
+                android:textColor="@color/gray"
+                android:layout_toRightOf="@+id/progCounter" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/progCounter">
+
+                <ProgressBar
+                    android:id="@+id/progBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="10"
+                    android:indeterminate="false"
+                    android:minHeight="10dp"
+                    android:progress="0" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/etQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lllayout"
+            tools:text="What country does this flag belong?" />
+
+        <ImageView
+            android:id="@+id/imgFlags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/quiz_image_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etQuestions"
+            tools:src="@drawable/ic_flag_of_argentina" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFlags">
+
+            <TextView
+                android:id="@+id/optionOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_1"
+                android:textSize="@dimen/quiz_question_text_size"
+                android:background="@drawable/quiz_options_default_background"
+                android:padding="@dimen/quiz_question_padding" />
+
+            <TextView
+                android:id="@+id/optionTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_2"
+                android:textSize="@dimen/quiz_question_text_size"
+                android:background="@drawable/quiz_options_default_background"
+                android:padding="@dimen/quiz_question_padding"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/optionOne" />
+
+            <TextView
+                android:id="@+id/optionThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_3"
+                android:textSize="@dimen/quiz_question_text_size"
+                android:background="@drawable/quiz_options_default_background"
+                android:padding="@dimen/quiz_question_padding"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/optionTwo" />
+
+            <TextView
+                android:id="@+id/optionFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_4"
+                android:textSize="@dimen/quiz_question_text_size"
+                android:background="@drawable/quiz_options_default_background"
+                android:padding="@dimen/quiz_question_padding"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/optionThree" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlQuestions" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
