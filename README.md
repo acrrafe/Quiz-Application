@@ -18,7 +18,7 @@ The inclusion of Lambdas in QuizApp adds a touch of conciseness and expressivene
 ## Getting Started
 1. Clone the repository to your local machine.
    
-  git clone https://github.com/your-username/QuizApp.git
+     git clone https://github.com/your-username/QuizApp.git
 
 2. Open the project in your preferred Android development environment (e.g., Android Studio).
 
